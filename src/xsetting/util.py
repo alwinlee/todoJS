@@ -4,40 +4,8 @@ from rest_framework.response import Response
 from django.conf import settings
 import json, os, time, sqlite3
 
-def get_db_info(dbname):
-  dbset = {}
-  try:
-    dbset = settings.DATABASES[dbname]
-  except:
-    dbset = {
-      'ENGINE': '', 'TYPE': '', 'NAME': '', 'USER': '', 'PASSWORD': '', 'HOST': '', 'PORT': '',
-    }
-  return dbset
-
-
 def tb_timezone():
   return "SET TIMEZONE to 'Asia/Taipei';"
-
-
-def get_siteinfo():
-  siteinfo = {
-    'sitetitle': {
-      'en': 'DATA PLATFORM',
-      'zh-tw': '資料分析管理系統',
-      'zh-cn': '資料分析管理系統'
-    },
-    'enterinfo': {
-      'en': 'Please Enter Your Information',
-      'zh-tw': '請輸入帳號資訊',
-      'zh-cn': '请输入帐户信息'
-    },
-    'login': {
-      'en': 'Login',
-      'zh-tw': '登錄',
-      'zh-cn': '登录'
-    }
-  }
-  return siteinfo
 
 
 def isDigital(val):
