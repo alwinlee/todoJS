@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "django",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/manage.py",
+      "console": "integratedTerminal",
+      "args": [
+        "runserver",
+        "0.0.0.0:8088",
+        "--noreload"
+        //"--nothreading"
+      ],
+      "django": true
+    },
+    {
+      "name": "py file",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
