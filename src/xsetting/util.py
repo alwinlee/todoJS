@@ -39,7 +39,7 @@ def verify_params(req, lst, exlst=[]):
   try:
     if req.method == 'GET':
       params = req.GET
-    elif req.method == 'POST':
+    elif req.method in ['POST', 'PUT', 'DELETE'] :
       body_unicode = req.body.decode('utf-8')
       params = json.loads(body_unicode)
   except:
